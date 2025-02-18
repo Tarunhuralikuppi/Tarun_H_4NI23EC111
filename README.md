@@ -111,10 +111,42 @@ Gain=-46dB
 
 ### DC Analysis:
 ![image](https://github.com/user-attachments/assets/22db4ad5-fded-4d3f-b242-90df087d8d6f)
+
+Id=2.74e^-5A,voltage Applied=0.9,1.8
 ## AC Analysis:
+![image](https://github.com/user-attachments/assets/98df8420-7496-4de6-b63f-54b384a211b4)
 ## Transient Analysis:
 ![image](https://github.com/user-attachments/assets/45bcf003-731f-47bf-bf6f-e23f94317bbd)
-ed
+There is a phase shift of 180 degree in between input waveform and output waveform.
+
+### Calculation:
+
+Given POWER=50 uWatts
+
+Power=V*I
+
+voltage(Vdd)=1.8V
+
+Therefore; I=Power/Voltage=50u/1.8=27.7uA
+
+Approx.Id~=27uA
+
+Operating Frequency=1KHz
+
+V1=1.8V, V2=0.9V
+
+W(CMOSP)=134um
+
+W(CMOSN)=1.08um
+
+## Inference:
+1.The low power budget implies that trade-offs between gain, bandwidth, and noise performance must be carefully considered.
+
+2.The common-source amplifier design requires ensuring both NMOS and PMOS operate in saturation for proper amplification.
+
+3.Transistor width and length can vary power consumption, gain, and frequency response by the graph.
+
+4.From doing AC analysis ,we can find the bandwidth,gain from the given graph we can find the values.
 
 
 
