@@ -114,7 +114,7 @@ Gain=-46dB
 ## AC Analysis:
 ## Transient Analysis:
 ![image](https://github.com/user-attachments/assets/45bcf003-731f-47bf-bf6f-e23f94317bbd)
-
+ed
 
 
 
