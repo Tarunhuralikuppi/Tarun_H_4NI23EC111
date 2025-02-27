@@ -41,7 +41,7 @@ Step 5:Run the Transient Analysis to observe the time-domain response.Check the 
 Step 6:  Review the results for DC, AC, and Transient analyses.Make adjustments to biasing or component values.
 
 ## Circuit:
-![image](https://github.com/user-attachments/assets/46add1b1-fa11-4674-8bbf-4727e428fba2)
+
 
 ## Calulation:
 Power = 50uW
@@ -84,15 +84,15 @@ Gain=-46dB
 3.Increasing the MOSFET’s width allows more current to flow, directly influencing its performance.
 
 4.Q-point prevents distortion and ensures reliable signal processing.
-# Circuit 2
-## DC Analysis:
-![image](https://github.com/user-attachments/assets/fd4d05a6-f15c-4b0e-9e7f-20e0ef5dc1b1)
+# Circuit 2:
+![fmhjgkj](https://github.com/user-attachments/assets/67af7152-38dd-494e-a171-8cf8b90332ed)
+
 ## Procedure:
 
 1.Open LTSpice and import the necessary library files to ensure accurate NMOS and PMOS transistor models.
 
 
-2.Select the required components for the circuit: one PMOS, one NMOS, three voltage sources (1.8V, 0.3V, and 0.6V), and a ground connection.
+2.Select the required components for the circuit: one PMOS, one NMOS, three voltage sources (1.8V, 0.9V, and -5V), and a ground connection.
 
 
 3.Arrange and connect these components according to the given circuit diagram.
@@ -110,34 +110,17 @@ Gain=-46dB
 7.For AC Analysis, modify the DC source to a sinusoidal waveform with parameters .Then, select the AC simulation option . Finally, place a node at the output waveform to observe the response.
 
 ### DC Analysis:
-![image](https://github.com/user-attachments/assets/22db4ad5-fded-4d3f-b242-90df087d8d6f)
+![ffgf](https://github.com/user-attachments/assets/de9cca2c-f379-4337-8783-81ed67b0431e)
 
-Id=2.74e^-5A,voltage Applied=0.9,1.8
+
+Id=1.48A,voltage Applied=0.9,1.8
 ## AC Analysis:
 ![image](https://github.com/user-attachments/assets/98df8420-7496-4de6-b63f-54b384a211b4)
 ## Transient Analysis:
 ![image](https://github.com/user-attachments/assets/45bcf003-731f-47bf-bf6f-e23f94317bbd)
 There is a phase shift of 180 degree in between input waveform and output waveform.
 
-### Calculation:
 
-Given POWER=50 uWatts
-
-Power=V*I
-
-voltage(Vdd)=1.8V
-
-Therefore; I=Power/Voltage=50u/1.8=27.7uA
-
-Approx.Id~=27uA
-
-Operating Frequency=1KHz
-
-V1=1.8V, V2=0.9V
-
-W(CMOSP)=134um
-
-W(CMOSN)=1.08um
 
 ## Inference:
 1.The low power budget implies that trade-offs between gain, bandwidth, and noise performance must be carefully considered.
