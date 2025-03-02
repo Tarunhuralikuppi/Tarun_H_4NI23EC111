@@ -25,8 +25,12 @@ This Experiement is conducted in 3 stages.Where common source terminal is connec
 For all this circuit we need find out the AC analysis ,Transient analysis And Frequency Response.
 
 ### 1.Circuit 1 (Common Source terminal is coonected to resistor):
-   In this circuit we have two MOSFET connected to same voltage input formiing differential pair.And Load Resistor is coonected to the Drain terminal of MOSFET.
-   Source terminal is connected resistor and another terminal is connected to ground this is called souce degenration resistor.
+   In this circuit we have two MOSFET connected to same voltage input forming differential pair.And Load Resistor is coonected to the Drain terminal of MOSFET.
+   Source terminal is connected resistor and another terminal is connected to ground this is called source degenration resistor.
+   
+   CIRCUIT:
+   
+   
 
 
 
