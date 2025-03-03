@@ -132,6 +132,7 @@ Now we are replacing the current source to the mosfet(M3) where we need to keep 
 
 ### DC Analysis:
 ![DC mosfet](https://github.com/user-attachments/assets/d9d62a7c-4730-4d2e-a754-f2c9d31fd491)
+
 By identifying the value of VB of MOSFET M3 we need check the current flow through the MOSFET and It should be in saturation region.
 
 VB value (Gate terminal of MOSFET M3)=0.86v
@@ -141,7 +142,7 @@ VB value (Gate terminal of MOSFET M3)=0.86v
 
 ![transient mos](https://github.com/user-attachments/assets/72839a11-9d6e-492f-9d6d-76920988fb88)
 
-Voltage gain = vout/vin
+Voltage gain(Av) = vout/vin
             =(1.70-1.60)/(1.72-1.685)
             =2.857
  Voltage gain of MOSFET is 2.857
@@ -150,6 +151,12 @@ Voltage gain = vout/vin
 ### AC Analysis:
 
 ![Mosfet AC](https://github.com/user-attachments/assets/aa739297-2f61-489b-b38c-d93fbf66bceb)
+
+Gain(dB)=20*log(Av)
+        =20*log(2.857)
+        =9.11
+
+  Gain of MOSFET is 9.11 which same that of waveform obtained.
 
 
 ## INFERENCE:
