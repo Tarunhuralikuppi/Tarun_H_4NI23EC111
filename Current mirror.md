@@ -49,12 +49,7 @@ I_t = \frac{P}{V_{DD}} = \frac{1mW}{1.8V} = 0.555mA
 I_{ref} = \frac{I_t}{2} = 0.2778mA
 ```
 
-
-
-
 ## L = 180 nm
-
-
 
 ![circuit dc](https://github.com/user-attachments/assets/de016b00-f74c-4a06-9691-91bfc23b89f2)
 
@@ -81,129 +76,39 @@ Obtained gain =12.729
 #### AC Analysis
 ![Screenshot 2025-04-03 235849](https://github.com/user-attachments/assets/2170bfa3-5c24-4056-ab11-14da7c45f81c)
 Obtained gain = 22.760 dB
-### 1:2 W/L Ratio
-![Screenshot 2025-03-23 145056](https://github.com/user-attachments/assets/489c0a7b-942d-446b-9e5e-1e5e4d03af63)
-#### DC Analysis
-![Screenshot 2025-03-23 145051](https://github.com/user-attachments/assets/6a09d7b0-9c07-4cdc-81c4-d1a29e1eba4e)
-- Measured drain current: **Id = 0.00037 A**
 
-#### Transient Analysis
-![Screenshot 2025-03-23 100143](https://github.com/user-attachments/assets/90a858f0-8825-4611-b537-b4d5abeddde5)
-- The waveform shows further amplification due to the 1:2 ratio.
+## Ratio 1:2
+Current Calculation:
+```math
+I_{ref} = \frac{I_t}{3} = 0.185mA
+```
 
-#### AC Analysis
-![Screenshot 2025-03-23 160619](https://github.com/user-attachments/assets/f1712368-3be6-48b4-910d-3e674a100f67)
-- The measured **-3dB voltage gain (Av) = 21 dB**
+W/L values:
+```plaintext
+M1: 2.9um / 180nm
+M2: 5.8um / 180nm
+M3: 5.8um / 180nm
+```
 
-### Inference for L = 180 nm
-- The 1:2 ratio results in a higher gain due to the increased transconductance (gm).
-- The transient response confirms that the circuit amplifies the signal appropriately.
-- DC analysis verifies correct mirroring of current values.
 
-## Comparison Table for L = 180 nm
-| Parameter | 1:1 Ratio (L = 180 nm) | 1:2 Ratio (L = 180 nm) |
-|-----------|------------------------|------------------------|
-| **Id (A)** | 0.0002769 | 0.00037 |
-| **-3dB Gain (dB)** | 17.5 | 21 |
+### **Transient Analysis**
 
-## L = 500 nm
-### 1:1 W/L Ratio
-![Screenshot 2025-03-23 153233](https://github.com/user-attachments/assets/409d0f9d-8f15-40d4-9bed-f16c3417e18d)
-#### DC Analysis
-![Screenshot 2025-03-23 151351](https://github.com/user-attachments/assets/cf83b071-d6c3-440a-aa0f-8095fa97afe6)
-- Measured drain current: **Id = 0.000274 A**
+Obtained gain: 12.1326V/V
+![Screenshot 2025-04-04 002616](https://github.com/user-attachments/assets/f2a8ccb3-5cda-4365-8fde-702007e09fff)
 
-#### Transient Analysis
-![Screenshot 2025-03-23 153125](https://github.com/user-attachments/assets/8c131f5d-e25f-4604-879f-d01f484c4356)
-- The waveform shows amplification, confirming proper current mirroring.
+### **AC Response**
 
-#### AC Analysis
-![Screenshot 2025-03-23 155846](https://github.com/user-attachments/assets/65e79d5c-d3ef-451c-bf11-d9b36f27a418)
-- The measured **-3dB voltage gain (Av) = 17.5 dB**
+![Screenshot 2025-04-04 002719](https://github.com/user-attachments/assets/556a840c-2a33-46d9-a513-962d1fe76e2c)
+Obtained gain (dB): 24.306 dB
 
-### 1:2 W/L Ratio
-![Screenshot 2025-03-23 154601](https://github.com/user-attachments/assets/f3b0471f-f9c2-4767-9019-3c929cf64cc1)
-#### DC Analysis
-![Screenshot 2025-03-23 154529](https://github.com/user-attachments/assets/063bd85a-409b-4803-b57b-61718d55594e)
-- Measured drain current: **Id = 0.00037 A**
 
-#### Transient Analysis
-![Screenshot 2025-03-23 155012](https://github.com/user-attachments/assets/afb1eb82-8b97-4280-a9b8-3cfef9475189)
-- The waveform shows further amplification due to the 1:2 ratio.
+## **Inference:**
+- The current mirror accurately reproduces the reference current with minimal deviations.
+- Altering the W/L ratio proportionally maintains a nearly constant drain current, demonstrating the robustness of the mirror circuit.
+- Gain measurements slightly exceed theoretical predictions, likely due to parasitic effects or transistor mismatches.
+- Increasing the mirror ratio improves gain but reduces bandwidth.
+- Results align well with theoretical expectations, verifying the circuit's reliability.
 
-#### AC Analysis
-![Screenshot 2025-03-23 234324](https://github.com/user-attachments/assets/fc4673c6-132f-44ed-a8bb-c001de8d5a47)
-- The measured **-3dB voltage gain (Av) = 18.6 dB**
-
-### Inference for L = 500 nm
-- The 1:2 ratio again results in higher gain due to increased transconductance (gm).
-- The slightly lower gain compared to L = 180 nm suggests increased output resistance.
-- The transient response confirms that the circuit amplifies the signal appropriately.
-
-## Comparison Table for L = 500 nm
-| Parameter | 1:1 Ratio (L = 500 nm) | 1:2 Ratio (L = 500 nm) |
-|-----------|------------------------|------------------------|
-| **Id (A)** | 0.000274 | 0.00037 |
-| **-3dB Gain (dB)** | 17.5 | 18.6 |
-
-## L = 1 μm
-### 1:1 W/L Ratio
-![Screenshot 2025-03-23 221625](https://github.com/user-attachments/assets/5300706d-1f59-49ac-864c-792d2f2e8bd0)
-#### DC Analysis
-![Screenshot 2025-03-23 221605](https://github.com/user-attachments/assets/9b5fba75-59c2-437c-aad1-48f1ae2fb435)
-- Measured drain current: **Id = 0.000277 A**
-
-#### Transient Analysis
-![Screenshot 2025-03-23 221756](https://github.com/user-attachments/assets/49684e7c-0773-42e4-bc6f-1caf52b4e202)
-- The waveform shows amplification, confirming proper current mirroring.
-
-#### AC Analysis
-![Screenshot 2025-03-23 222039](https://github.com/user-attachments/assets/31858b96-2313-4fe4-96e3-0ba49bc3e8e6)
-- The measured **-3dB voltage gain (Av) = 20.3 dB**
-
-### 1:2 W/L Ratio
-![Screenshot 2025-03-23 222455](https://github.com/user-attachments/assets/9f89a288-07d3-4574-880a-26f6596ef5be)
-#### DC Analysis
-![Screenshot 2025-03-23 222445](https://github.com/user-attachments/assets/ec56772a-6dda-4478-a7b8-f451a024abc6)
-- Measured drain current: **Id = 0.00037 A**
-
-#### Transient Analysis
-![Screenshot 2025-03-23 222711](https://github.com/user-attachments/assets/6945e913-d36b-4bad-95e8-c49c9adce00c)
-- The waveform shows further amplification due to the 1:2 ratio.
-
-#### AC Analysis
-![Screenshot 2025-03-23 223005](https://github.com/user-attachments/assets/ea922b4c-dd11-4253-827b-2acc1c90fa6e)
-- The measured **-3dB voltage gain (Av) = 27.6 dB**
-
-### Inference for L = 1 μm
-- The highest gain is observed in the **L = 1 μm** case, particularly for the 1:2 ratio.
-- The transient response confirms proper signal amplification.
-- Increasing L increases gain due to reduced short-channel effects and higher output resistance.
-
-## Comparison Table for L = 1 μm
-| Parameter | 1:1 Ratio (L = 1 μm) | 1:2 Ratio (L = 1 μm) |
-|-----------|---------------------|---------------------|
-| **Id (A)** | 0.000277 | 0.00037 |
-| **-3dB Gain (dB)** | 20.3 | 27.6 |
-
-## Inference
-- Comparing all gain values, we observe that the gain increases as the channel length (L) increases. The highest gain is seen in the **L = 1 μm** case, confirming that longer channel lengths contribute to improved voltage gain.
-- The increase in L results in **better current mirroring** due to reduced short-channel effects and increased output resistance. This leads to a more stable and accurate current replication.
-- The **1:2 ratio consistently provides higher gain** compared to the 1:1 ratio due to the increase in transconductance (gm), which enhances the amplification capability.
-- **Transient Analysis Comparison:**
-  - As we compare the transient analysis waveforms across different values of L, we observe that the **width of the sine wave increases** when L is increased.
-  - This occurs because **the transient response becomes slower** with increasing L. The increased channel length results in **higher output resistance**, which leads to **lower bandwidth** and a longer time constant for circuit response.
-  - The slower transient response means that the circuit takes more time to settle to steady-state values, which can be seen as a widening of the waveform in the time domain.
-  - This behavior is expected since **a higher L leads to lower drain-source conductance (gds), reducing the speed at which current changes in response to voltage variations**.
-
-### Result
-| Parameter | 1:1 Ratio (L = 180 nm) | 1:2 Ratio (L = 180 nm) | 1:1 Ratio (L = 500 nm) | 1:2 Ratio (L = 500 nm) | 1:1 Ratio (L = 1 μm) | 1:2 Ratio (L = 1 μm) |
-|-----------|------------------------|------------------------|------------------------|------------------------|---------------------|---------------------|
-| **Id (A)** | 0.0002769 | 0.00037 | 0.000274 | 0.00037 | 0.000277 | 0.00037 |
-| **-3dB Gain (dB)** | 17.5 | 21 | 17.5 | 18.6 | 20.3 | 27.6 |
-
-- From the table, we confirm that  **generaly both Id and gain improve as L increases**, validating the theoretical expectations of current mirroring performance with longer channel lengths.
-- Additionally, the **slower transient response at higher L values** indicates a trade-off between gain and speed, which should be considered in practical circuit designs.
 
 
 # MOS Differential Amplifier With Current Mirror
