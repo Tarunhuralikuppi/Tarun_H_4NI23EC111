@@ -36,7 +36,7 @@ Maintains constant current irrespective of load variations.
 Provides high output impedance.
 Ensures precise current replication across outputs.
 
-## Calculation
+## 🧮Calculation
 
 ### Given:
 - **Supply Voltage**: V<sub>dd</sub> = 1.8V  
@@ -53,6 +53,7 @@ I_{ref} = \frac{I_t}{2} = 0.2778mA
 
 ![circuit dc](https://github.com/user-attachments/assets/de016b00-f74c-4a06-9691-91bfc23b89f2)
 
+Width of MOS:
 M1: 3.37um, 
 M2: 3.37um, 
 M3: 3.37um 
@@ -78,7 +79,7 @@ Obtained gain =12.729
 Obtained gain = 22.760 dB
 
 ## Ratio 1:2
-Current Calculation:
+🧮Current Calculation:
 ```math
 I_{ref} = \frac{I_t}{3} = 0.185mA
 ```
@@ -134,37 +135,44 @@ Overall, the circuit’s behavior closely matches theoretical predictions, suppo
 
 ## Theory
 
-A **current mirror** is a circuit that replicates (mirrors) the current from one active device to another, ensuring a constant current source or sink. In the context of a **MOS differential amplifier**, the current mirror plays a crucial role in biasing and ensuring proper operation.
+A current mirror is used to provide a constant bias current in a differential amplifier. This stable current helps the amplifier operate reliably and improves performance.
 
-### Key Insights into Current Mirror with Differential Amplifier:
+It enhances common-mode noise rejection by keeping the current balanced between the two transistors. For accurate current mirroring, the mirror transistors must be well-matched.
 
-1. **Current Biasing:** The current mirror provides a stable biasing current, ensuring consistent operation.
-2. **Improved Common-Mode Rejection:** The differential amplifier rejects common-mode noise, and the current mirror enhances this performance.
-3. **Matching Considerations:** The transistors used in the current mirror must be well-matched to ensure accurate current mirroring.
-4. **Voltage Headroom:** Proper design ensures that the circuit operates within the given supply voltage constraints.
-5. **Load Considerations:** The output impedance of the current mirror affects the gain and performance of the differential amplifier.
+Proper design ensures enough voltage headroom and high output impedance, which supports better gain and frequency response.
 
-## Calculation
+In short, the current mirror improves stability, accuracy, and signal quality in differential amplifiers.
+
+
+### ✨Significance of Current Mirror in Differential Amplifier
+The current mirror plays a crucial role in enhancing the performance and reliability of a differential amplifier. It provides a constant tail current, which ensures stable biasing, improves common-mode rejection, and allows the amplifier to operate with greater precision and linearity.
+
+By maintaining symmetry and a fixed operating point, the current mirror ensures consistent gain, better noise immunity, and improved high-frequency response. It's essential for achieving the core advantages of differential amplification in analog circuits.
+
+
+
+## 🧮Calculation
 
 - **Determine Iss (Source Current):**\
   Iss = Power / Vdd\
   Iss = 3mW / 3.3V = 0.909mA
 
-## Circuit 
+## ⚡Circuit 
 
 ![2 1](https://github.com/user-attachments/assets/5227fdb3-a510-4c4d-bf44-e94e5c10b936)
 
-## DC Analysis
+## ✏️DC Analysis
 
 ![2 2](https://github.com/user-attachments/assets/c76d901c-b657-42cb-9b15-e93e5de8d2c9)
 
 
-## Transient Analysis
+## ✏️Transient Analysis
 ![Screenshot 2025-03-24 234402](https://github.com/user-attachments/assets/2ea344f8-40b4-4a46-a28f-565a534f19aa)
+Obtained Gain=14.93
 
-
-## AC Analysis
+## ✏️AC Analysis
 ![image](https://github.com/user-attachments/assets/42e0cb8e-dc0c-4529-9c81-caea25ffe597)
+
 Gain=34.73db
 
 
