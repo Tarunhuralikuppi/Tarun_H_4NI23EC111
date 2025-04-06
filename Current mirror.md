@@ -57,8 +57,9 @@ I_{ref} = \frac{I_t}{2} = 0.2778mA
 
 
 ![circuit dc](https://github.com/user-attachments/assets/de016b00-f74c-4a06-9691-91bfc23b89f2)
-M1: 3.37um 
-M2: 3.37um 
+
+M1: 3.37um, 
+M2: 3.37um, 
 M3: 3.37um 
 
 #### DC Analysis
@@ -67,11 +68,11 @@ M3: 3.37um
 - Measured drain current: **Id = 0.0002789A**
  ### **Analysis by Varying L while Maintaining the Ratio (W/L) constant**
 
-| Length| Width | Current() |
+| Length| Width | Current(ID<sub>M3</sub>) |
 |------------|------------|---------|
-| M1 (Reference) | 1 | Iref |
-| M2 (Output - 1:1) | 1 | Iref |
-| M2 (Output - 1:2) | 2 | 2 × Iref |
+| 180nm | 3.37um | 0.0002789A |
+| 500nm | 9.361um | 0.0002819A |
+|1000nm | 18.722um | 0.0002805A |
 
 #### Transient Analysis
 ![transient](https://github.com/user-attachments/assets/1d9b00cf-60a3-49a3-a4ef-bc8c58363afb)
