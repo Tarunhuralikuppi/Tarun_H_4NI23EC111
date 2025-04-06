@@ -2,8 +2,8 @@
 
 
 # **CURRENT MIRROR**
-## Aim
-Design and analyze the given current mirror circuit with the following specifications:
+## 🧪Aim
+Design and Analysis of Current Mirror as Active Load in an Amplifier Circuit with the following specifications:
 - **Voltage Gain (Av) > 10 V/V**
 - **Supply Voltage (Vdd) = 1.8V**
 - **Power Consumption (P) <= 1W**
@@ -56,19 +56,30 @@ I_{ref} = \frac{I_t}{2} = 0.2778mA
 
 
 
+![circuit dc](https://github.com/user-attachments/assets/de016b00-f74c-4a06-9691-91bfc23b89f2)
+M1: 3.37um 
+M2: 3.37um 
+M3: 3.37um 
 
 #### DC Analysis
-![Screenshot 2025-03-23 100056](https://github.com/user-attachments/assets/9dde0e14-5826-4171-88f3-96dc7273cd21)
-- Measured drain current: **Id = 0.0002769 A**
+![dc analysis](https://github.com/user-attachments/assets/4f3a64a5-ce89-40f8-8cda-4c67547f1d8a)
+
+- Measured drain current: **Id = 0.0002789A**
+ ### **Analysis by Varying L while Maintaining the Ratio (W/L) constant**
+
+| Length| Width | Current() |
+|------------|------------|---------|
+| M1 (Reference) | 1 | Iref |
+| M2 (Output - 1:1) | 1 | Iref |
+| M2 (Output - 1:2) | 2 | 2 × Iref |
 
 #### Transient Analysis
-![Screenshot 2025-03-23 145031](https://github.com/user-attachments/assets/33032405-d34d-401b-8953-a6d55a45376f)
-- The waveform shows amplification, confirming proper current mirroring.
+![transient](https://github.com/user-attachments/assets/1d9b00cf-60a3-49a3-a4ef-bc8c58363afb)
 
+Obtained gain =12.729
 #### AC Analysis
-![Screenshot 2025-03-24 193744](https://github.com/user-attachments/assets/54154034-e8e8-46e4-8d99-7a88cc447468)
-- The measured **-3dB voltage gain (Av) = 17.5 dB**
-
+![Screenshot 2025-04-03 235849](https://github.com/user-attachments/assets/2170bfa3-5c24-4056-ab11-14da7c45f81c)
+Obtained gain = 22.760 dB
 ### 1:2 W/L Ratio
 ![Screenshot 2025-03-23 145056](https://github.com/user-attachments/assets/489c0a7b-942d-446b-9e5e-1e5e4d03af63)
 #### DC Analysis
